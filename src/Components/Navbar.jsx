@@ -344,42 +344,46 @@ function Navbar() {
                             <div className="nav-women-cat">
                                     <div className="nav-men-cat-div1">
                                         <div className="nav-men-cat-topwear">
-                                            <h5 className="nav-men-cat-title">Topwear</h5>
-                                            <Link to={`/men-tshirt`} className="nav-men-cat-items"><p>T-Shirt</p></Link>
-                                            <Link to={`/men-casual-shirts`} className="nav-men-cat-items"><p>Casual Shirts</p></Link>
-                                            <Link to={`/men-formal-shirts`} className="nav-men-cat-items"><p>Formal Shirts</p></Link>
-                                            <Link to={`/men-sweatshirts`} className="nav-men-cat-items"><p>Sweatshirts</p></Link>
-                                            <Link to={`/men-sweaters`} className="nav-men-cat-items"><p>Sweaters</p></Link>
-                                            <Link to={`/men-jackets`} className="nav-men-cat-items"><p>Jackets</p></Link>
-                                            <Link to={`/men-blazer-coats`} className="nav-men-cat-items"><p>Blazer & Coats</p></Link>
-                                            <Link to={`/men-suits`} className="nav-men-cat-items"><p>Suits</p></Link>
-                                            <Link to={`/men-rain-jackets`} className="nav-men-cat-items"><p>Rain Jackets</p></Link>
+                                            <h5 className="nav-men-cat-title">Indian & Fusion Wear</h5>
+                                            <Link to={`/women-Kurtas & Suits`} className="nav-men-cat-items"><p>Kurtas & Suits</p></Link>
+                                            <Link to={`/women-Kurtis,Tunics & Tops`} className="nav-men-cat-items"><p>Kurtis,Tunics & Tops</p></Link>
+                                            <Link to={`/women-Ethinc Wear`} className="nav-men-cat-items"><p>Ethinc Wear</p></Link>
+                                            <Link to={`/women-Leggings,Salwars & Churidars`} className="nav-men-cat-items"><p>Leggings,Salwars & Churidars</p></Link>
+                                            <Link to={`/women-Skirts & Palazzos`} className="nav-men-cat-items"><p>Skirts & Palazzos</p></Link>
+                                            <Link to={`/women-Sarees`} className="nav-men-cat-items"><p>Sarees</p></Link>
+                                            <Link to={`/women-Dress Materials`} className="nav-men-cat-items"><p>Dress Materials</p></Link>
+                                            <Link to={`/women-Lehenga Cholis`} className="nav-men-cat-items"><p>Lehenga Cholis</p></Link>
+                                            <Link to={`/women-Dupatta & Shawls`} className="nav-men-cat-items"><p>Dupatta & Shawls</p></Link>
+                                            <Link to={`/women-Jackets`} className="nav-men-cat-items"><p>Jackets</p></Link>
                                         </div>
                                         <div className="nav-men-cat-indian-festival-wear">
-                                            <h5 className="nav-men-cat-title">Indian & Festival Wear</h5>
-                                            <Link to={`/men-kurtas-kurta-sets`} className="nav-men-cat-items"><p>Kurtas & Kurta Sets</p></Link>
-                                            <Link to={`/men-sherwanis`} className="nav-men-cat-items"><p>Sherwanis</p></Link>
-                                            <Link to={`/men-nehru-jackets`} className="nav-men-cat-items"><p>Nehru Jackets</p></Link>
-                                            <Link to={`/men-dhotis`} className="nav-men-cat-items"><p>Dhotis</p></Link>
+                                          
+                                            <h2 className="nav-men-cat-title">Belts, Scarves & More</h2>
+                                            <br />
+                                            <h2 className="nav-men-cat-title">Watches & Wearables</h2>
                                         </div>
                                     </div>
                                     <div className="nav-men-cat-div2">
                                         <div className="nav-men-cat-bottomwear">
-                                            <h5 className="nav-men-cat-title">Bottomwear</h5>
-                                            <Link to={`/men-jeans`} className="nav-men-cat-items"><p>Jeans</p></Link>
-                                            <Link to={`/men-casual-trousers`} className="nav-men-cat-items"><p>Casual Trousers</p></Link>
-                                            <Link to={`/men-formal-trousers`} className="nav-men-cat-items"><p>Formal Trousers</p></Link>
-                                            <Link to={`/men-shorts`} className="nav-men-cat-items"><p>Shorts</p></Link>
-                                            <Link to={`/men-trackpants-joggers`} className="nav-men-cat-items"><p>Track Pants & Joggers</p></Link>
+                                            <h5 className="nav-men-cat-title">Wester Wear</h5>
+                                            <Link to={`/women-Dresses`} className="nav-men-cat-items"><p>Dresses</p></Link>
+                                            <Link to={`/women-Tops`} className="nav-men-cat-items"><p>Tops</p></Link>
+                                            <Link to={`/women-Tshirts`} className="nav-men-cat-items"><p>Tshirts</p></Link>
+                                            <Link to={`/women-Jeans`} className="nav-men-cat-items"><p>Jeans</p></Link>
+                                            <Link to={`/women-Trousers & Capris`} className="nav-men-cat-items"><p>Trousers & Capris</p></Link>
+                                            <Link to={`/women-Shorts & Skirts`} className="nav-men-cat-items"><p>Shorts & Skirts</p></Link>
+                                            <Link to={`/women-Co-ords`} className="nav-men-cat-items"><p>Co-ords</p></Link>
+                                            <Link to={`/women-Playsuits`} className="nav-men-cat-items"><p>Playsuits</p></Link>
+                                            <Link to={`/women-Jumpsuits`} className="nav-men-cat-items"><p>Jumpsuits</p></Link>
+                                            <Link to={`/women-Shrugs`} className="nav-men-cat-items"><p>Shrugs</p></Link>
+                                            <Link to={`/women-Sweaters & Sweatshirts`} className="nav-men-cat-items"><p>Sweaters & Sweatshirts</p></Link>
+                                            <Link to={`/women-Jaackets & Coats`} className="nav-men-cat-items"><p>Jaackets & Coats</p></Link>
+                                            <Link to={`/women-Blazers & Waistcoats`} className="nav-men-cat-items"><p>Blazers & Waistcoats</p></Link>
+
+                                    
+
                                         </div>
-                                        <div className="nav-men-cat-innerwear-sleepwear">
-                                            <h5 className="nav-men-cat-title">Innerwear & Sleepwear</h5>
-                                            <Link to={`/men-briefs-trunks`} className="nav-men-cat-items"><p>Briefs & Trunks</p></Link>
-                                            <Link to={`/men-boxers`} className="nav-men-cat-items"><p>Boxers</p></Link>
-                                            <Link to={`/men-vests`} className="nav-men-cat-items"><p>Vests</p></Link>
-                                            <Link to={`/men-sleepwear-longwear`} className="nav-men-cat-items"><p>Sleepwear & Longwear</p></Link>
-                                            <Link to={`/men-thermals`} className="nav-men-cat-items"><p>Thermals</p></Link>
-                                        </div>
+                                        
                                         <div className="nav-men-cat-plus-size">
                                             <h5 className="nav-men-cat-title">Plus Size</h5>
                                         </div>
