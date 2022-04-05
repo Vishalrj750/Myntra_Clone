@@ -23,6 +23,9 @@ const NavbarWrapper = styledComponents.div`
 .nav-link{
     text-decoration: none;
 }
+.nav-title-div{
+    height: 8vh;
+}
 .nav-title{
     color: black;
 }
@@ -335,7 +338,9 @@ function Navbar() {
                     </Link>
                     <Link to={`/shop/women`} className="nav-link">
                         <div className="nav-women">
-                            <h4 className="nav-title">WOMEN</h4>
+                            <div className="nav-title-div">
+                                <h4 className="nav-title">WOMEN</h4>
+                            </div>
                             <div className="nav-women-cat">
                                     <div className="nav-men-cat-div1">
                                         <div className="nav-men-cat-topwear">
@@ -448,7 +453,9 @@ function Navbar() {
                     </Link>
                     <Link to={`/shop/kids`} className="nav-link">
                         <div className="nav-kids">
-                            <h4 className="nav-title">KIDS</h4>
+                            <div className="nav-title-div">
+                                <h4 className="nav-title">KIDS</h4>
+                            </div>
                             <div className="nav-kids-cat">
                                     <div className="nav-men-cat-div1">
                                         <div className="nav-men-cat-topwear">
@@ -561,19 +568,25 @@ function Navbar() {
                     </Link>
                     <Link to={`/shop/home-living`} className="nav-link">
                         <div className="nav-home-living">
-                            <h4 className="nav-title">HOME & LIVING</h4>
+                            <div className="nav-title-div">
+                                <h4 className="nav-title">HOME & LIVING</h4>
+                            </div>
                             <div className="nav-home-living-cat">Main Div Home & Living</div>
                         </div>
                     </Link>
                     <Link to={`/shop/beauty`} className="nav-link">
                         <div className="nav-beauty">
-                            <h4 className="nav-title">BEAUTY</h4>
+                            <div className="nav-title-div">
+                                <h4 className="nav-title">BEAUTY</h4>
+                            </div>
                             <div className="nav-beauty-cat">Main Div Beauty</div>
                         </div>
                     </Link>
                     <Link to={`/shop/studio`} className="nav-link">
                         <div className="nav-studio">
-                            <h4 className="nav-title">STUDIO</h4>
+                            <div className="nav-title-div">
+                                <h4 className="nav-title">STUDIO</h4>
+                            </div>
                             <div className="nav-studio-cat">Main Div Studio</div>
                         </div>
                     </Link>
