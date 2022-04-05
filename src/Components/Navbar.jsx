@@ -14,6 +14,9 @@ const NavbarWrapper = styledComponents.div`
     display: flex;
     padding: 8px 0px 8px 0px;
     box-shadow: 10px 5px 5px #cecece;
+    position: fixed;
+    top: 0;
+    background-color: aliceblue;
 }
 .nav-left{
     width: 50%;
