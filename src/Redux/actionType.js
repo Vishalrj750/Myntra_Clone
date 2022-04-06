@@ -1,0 +1,7 @@
+export const ADD_TO_WISHLIST = "ADD_TO_WISHLIST"
+export const DELETE_FROM_WISHLIST = "DELETE_FROM_WISHLIST"
+
+export const ADD_TO_BAG = "ADD_TO_BAG"
+export const DELETE_FROM_BAG = "DELETE_FROM_BAG"
+
+export const TOGGLE_AUTH = "TOGGLE_AUTH"

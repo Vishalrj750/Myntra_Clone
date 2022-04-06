@@ -15,6 +15,7 @@ const NavbarWrapper = styledComponents.div`
     padding: 8px 0px 8px 0px;
     box-shadow: 10px 5px 5px #cecece;
     position: fixed;
+    z-index: 1;
     top: 0;
     background-color: aliceblue;
 }
@@ -80,6 +81,7 @@ const NavbarWrapper = styledComponents.div`
     display: flex;
     width: 80vw;
     padding: 25px;
+    background-color: aliceblue;
     box-shadow: 10px 5px 5px #cecece;
     position: absolute;
     left: 20%;
@@ -117,6 +119,7 @@ const NavbarWrapper = styledComponents.div`
     width: 80vw;
     margin: auto;
     padding: 25px;
+    background-color: aliceblue;
     box-shadow: 10px 5px 5px #cecece;
     position: absolute;
     left: 20%;
@@ -126,6 +129,7 @@ const NavbarWrapper = styledComponents.div`
     width: 80vw;
     margin: auto;
     padding: 25px;
+    background-color: aliceblue;
     box-shadow: 10px 5px 5px #cecece;
     position: absolute;
     left: 20%;
