@@ -209,6 +209,9 @@ const HomeWrapper = styledComponents.div`
 #radio5:checked ~ .navigation-auto .auto-btn5 {
   background: gray;
 }
+.SimpleImg{
+  margin-top:100px;
+}
 
 `
 
@@ -220,7 +223,7 @@ function HomeAll() {
 
 <div>
 
- <div>
+ <div className='SimpleImg'>
     <SimpleImageSlider
     
       width={1400}
