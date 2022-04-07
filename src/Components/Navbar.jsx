@@ -254,6 +254,12 @@ const NavbarWrapper = styledComponents.div`
 .nav-studio-cat-3 img{
     width: 30vw;
 }
+.wishlist-link{
+    width: 50px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
 `
 
 function Navbar() {
@@ -947,14 +953,16 @@ function Navbar() {
                             <p className="nav-profile-title">Profile</p>
                         </div>
                     </div>
-                    <div className="nav-wishlist-div">
-                        <div className="nav-wishlist-logo-div">
-                            <img src={ wishlist } alt="" className="nav-wishlist-logo" />
+                    <Link to={`/wishlist`} className="wishlist-link" >
+                        <div className="nav-wishlist-div">
+                            <div className="nav-wishlist-logo-div">
+                                <img src={ wishlist } alt="" className="nav-wishlist-logo" />
+                            </div>
+                            <div className="nav-wishlist-title-div">
+                                <p className="nav-wishlist-title">Wishlist</p>
+                            </div>
                         </div>
-                        <div className="nav-wishlist-title-div">
-                            <p className="nav-wishlist-title">Wishlist</p>
-                        </div>
-                    </div>
+                    </Link>
                     <div className="nav-bag-div">
                         <div className="nav-bag-logo-div">
                             <img src={ bag } alt="" className="nav-bag-logo" />
