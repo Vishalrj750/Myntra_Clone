@@ -9,25 +9,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-<<<<<<< HEAD
       <Routes>
         <Route path='/' element={ <HomeAll/> } />
         <Route path='/men-tshirt' element={ <Tshirts/> } />
       </Routes>
-=======
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      
-      
-    
-      <HomeAll />
-
-      <Footer/>
-
->>>>>>> 7dd856920fb26a7742ec2815d4b114b21f396ac9
     </div>
   );
 }

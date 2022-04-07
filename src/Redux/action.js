@@ -1,4 +1,4 @@
-import { ADD_TO_BAG, ADD_TO_WISHLIST, DELETE_FROM_BAG, DELETE_FROM_WISHLIST, TOGGLE_AUTH } from "./actionType";
+import { ADD_TO_BAG, ADD_TO_WISHLIST, DELETE_FROM_BAG, DELETE_FROM_WISHLIST, TOGGLE_AUTH, ADD_TO_TSHIRT } from "./actionType";
 
 export const addToWishlist = ( payload ) => {
     return {
@@ -31,6 +31,13 @@ export const deleteFromBag = ( payload ) => {
 export const toggleAuth = ( payload ) => {
     return {
         type: TOGGLE_AUTH,
+        payload
+    }
+}
+
+export const addToTshirt = ( payload ) => {
+    return {
+        type: ADD_TO_TSHIRT,
         payload
     }
 }

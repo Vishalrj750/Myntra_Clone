@@ -5,3 +5,5 @@ export const ADD_TO_BAG = "ADD_TO_BAG"
 export const DELETE_FROM_BAG = "DELETE_FROM_BAG"
 
 export const TOGGLE_AUTH = "TOGGLE_AUTH"
+
+export const ADD_TO_TSHIRT = "ADD_TO_TSHIRT"

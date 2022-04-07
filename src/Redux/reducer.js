@@ -1,9 +1,10 @@
-import { ADD_TO_BAG, ADD_TO_WISHLIST, DELETE_FROM_BAG, DELETE_FROM_WISHLIST, TOGGLE_AUTH } from "./actionType"
+import { ADD_TO_BAG, ADD_TO_TSHIRT, ADD_TO_WISHLIST, DELETE_FROM_BAG, DELETE_FROM_WISHLIST, TOGGLE_AUTH } from "./actionType"
 
 const initState = {
     wishlist: [],
     bag: [],
-    isAuth: false
+    isAuth: false,
+    tshirt: []
 }
 
 const reducer = ( state = initState, { type, payload } ) => {
@@ -36,6 +37,12 @@ const reducer = ( state = initState, { type, payload } ) => {
             return {
                 ...state,
                 isAuth: true
+            }
+        }
+        case ADD_TO_TSHIRT: {
+            return {
+                ...state,
+                tshirt: payload
             }
         }
         default:

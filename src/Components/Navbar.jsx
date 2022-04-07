@@ -15,11 +15,7 @@ const NavbarWrapper = styledComponents.div`
     padding: 8px 0px 8px 0px;
     box-shadow: 10px 5px 5px #cecece;
     position: fixed;
-<<<<<<< HEAD
-    z-index: 1;
-=======
     z-index:10;
->>>>>>> 7dd856920fb26a7742ec2815d4b114b21f396ac9
     top: 0;
     background-color: aliceblue;
 }
