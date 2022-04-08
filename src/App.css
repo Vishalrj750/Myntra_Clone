@@ -1,7 +1,14 @@
 .App {
   text-align: center;
 }
+hr{
+  margin-left:-19px;
+}
 
+.filt{
+  align-items:left;
+  text-align: left;
+}
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;

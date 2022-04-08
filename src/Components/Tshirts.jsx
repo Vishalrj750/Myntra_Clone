@@ -4,8 +4,13 @@ import { Card } from './Card'
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { addToTshirt } from "../Redux/action";
+import Filters from "./Filters";
+
+
 
 const TshirtWrapper = styled.div`
+display:flex;
+
 .main{
     width: 80vw;
     display: grid;
@@ -15,6 +20,7 @@ const TshirtWrapper = styled.div`
     justify-content: center;
     margin: auto;
     margin-top: 15vh;
+    margin-left:17vw;
 }
 `
 
@@ -39,7 +45,11 @@ function Tshirts() {
     
 
     return(
+        
         <TshirtWrapper>
+            <div className="filt">
+                <Filters/>
+            </div>
             <div className="main">
             { tshirt.map((item) => <Card key={ item.id } img={ item.images.image1 } title={ item.title } description={ item.description } price={ item.price } id={ item.id } /> ) }
             </div>
