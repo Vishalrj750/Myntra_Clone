@@ -29,7 +29,7 @@ const WishlistCard = ({item}) => {
             </div>
             <div className="details">
                 <h5>{title}</h5>
-                <p>{price}</p>
+                <h5>Rs.{price}</h5>
                 <Button onClick={handleClick}>MOVE TO BAG</Button>
                 
             </div>
@@ -45,6 +45,7 @@ const CardDiv = styled.div`
     width:200px;
     border:1px solid black;
     position:relative;
+    box-shadow: 8px 12px 12px #cecece;
     img{
         width: 100%;
         // height: 220px;

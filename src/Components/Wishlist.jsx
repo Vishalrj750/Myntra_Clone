@@ -5,10 +5,14 @@ import {useSelector} from "react-redux"
 import { useNavigate } from "react-router-dom";
 
 const WishlistWrapper = styled.div`
-margin-top: 15vh;
-display:flex;
-justify-content:space-evenly;
-flex-wrap:wrap;
+margin-top: 95px;;
+// display:flex;
+// justify-content:space-evenly;
+// flex-wrap:wrap;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 5%;
+margin-left: 5%;
 `
 
 function Wishlist() {
