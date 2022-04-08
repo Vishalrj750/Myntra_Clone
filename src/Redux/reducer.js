@@ -18,11 +18,7 @@ const reducer = ( state = initState, { type, payload } ) => {
         case DELETE_FROM_WISHLIST: {
             return {
                 ...state,
-<<<<<<< HEAD
                 wishlist: state.wishlist.filter((item) => payload !== item.id)
-=======
-                wishlist: state.wishlist.filter((item) => payload === item.id)
->>>>>>> 218d1af9a6507ee622fbbe2f73208844baf05e56
             }
         }
         case ADD_TO_BAG: {
