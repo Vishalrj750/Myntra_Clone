@@ -1,6 +1,7 @@
 import React from 'react'
 import styledComponents from "styled-components"
 import SimpleImageSlider from "react-simple-image-slider";
+import { Footer } from "./Footer";
 
 
 const images = [
@@ -731,6 +732,7 @@ function HomeAll() {
     </div>
     
     </HomeWrapper>
+    <Footer />
 
 </div>
 

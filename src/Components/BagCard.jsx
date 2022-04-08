@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { deleteFromBag, subtractFromTotal } from "../Redux/action";
 
 const BagCardWrapper = styled.div`
 .card-main-div{
@@ -35,8 +38,12 @@ const BagCardWrapper = styled.div`
 
 function BagCard({ img, title, description, price, id }) {
 
-    const handleClick = (id) => {
+    const total = useSelector((state) => state.total)
+    const dispatch = useDispatch()
 
+    const handleClick = () => {
+        dispatch( subtractFromTotal( total - price ) )
+        dispatch( deleteFromBag( id ) )
     }
     return(
         <BagCardWrapper>
@@ -48,7 +55,7 @@ function BagCard({ img, title, description, price, id }) {
                     <h4 className="card-title">{ title }</h4>
                     <p className="card-description">{ description }</p>
                     <p className="card-price">Rs.{ price }</p>
-                    <button className="remove" onClick={ () => handleClick(id) } >Remove</button>
+                    <button className="remove" onClick={ () => handleClick(price, id) } >Remove</button>
                 </div>
             </div>
         </BagCardWrapper>

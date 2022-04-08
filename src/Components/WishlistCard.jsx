@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import {useDispatch} from "react-redux"
-import{ addToBag, addToTotal, deleteFromWishlist}from "../Redux/action.js"
+import{ addToBag, addToTotal, deleteFromWishlist }from "../Redux/action.js"
 import { useSelector } from 'react-redux'
 
 
@@ -15,6 +15,7 @@ const WishlistCard = ({item}) => {
         dispatch(addToBag(item))
         dispatch(deleteFromWishlist(item.id))
         dispatch(addToTotal( total + item.price ))
+        console.log(total)
     }
 
     const removeClick=()=>{
@@ -23,8 +24,8 @@ const WishlistCard = ({item}) => {
     return (
         <CardDiv>
             <div className="img">
-                <img src={images.image1} />
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh6um2iMcZHnVRLthLpnB4UwrmhFf9LUzlzA&usqp=CAU" onClick={removeClick}/>
+                <img src={images.image1} alt='' />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh6um2iMcZHnVRLthLpnB4UwrmhFf9LUzlzA&usqp=CAU" alt='' onClick={removeClick}/>
             </div>
             <div className="details">
                 <h5>{title}</h5>

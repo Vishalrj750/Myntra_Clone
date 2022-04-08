@@ -236,4 +236,4 @@ Enjoy the hassle-free experience as you shop comfortably from your home or your 
   )
 }
 
-export default Footer
+export { Footer }

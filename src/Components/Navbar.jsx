@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 const NavbarWrapper = styledComponents.div`
 .nav{
     width: 100vw;
-    height: 10vh;
+    height: 65px;
     display: flex;
     padding: 8px 0px 8px 0px;
     box-shadow: 10px 5px 5px #cecece;
