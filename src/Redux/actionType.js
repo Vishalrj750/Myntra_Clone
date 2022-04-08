@@ -7,3 +7,6 @@ export const DELETE_FROM_BAG = "DELETE_FROM_BAG"
 export const TOGGLE_AUTH = "TOGGLE_AUTH"
 
 export const ADD_TO_TSHIRT = "ADD_TO_TSHIRT"
+
+export const ADD_TOTAL = "ADD_TOTAL"
+export const SUBTRACT_TOTAL = "SUBTRACT_TOTAL"

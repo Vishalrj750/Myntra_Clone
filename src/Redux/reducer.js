@@ -1,10 +1,11 @@
-import { ADD_TO_BAG, ADD_TO_TSHIRT, ADD_TO_WISHLIST, DELETE_FROM_BAG, DELETE_FROM_WISHLIST, TOGGLE_AUTH } from "./actionType"
+import { ADD_TO_BAG, ADD_TO_TSHIRT, ADD_TO_WISHLIST, DELETE_FROM_BAG, DELETE_FROM_WISHLIST, TOGGLE_AUTH, ADD_TOTAL, SUBTRACT_TOTAL } from "./actionType"
 
 const initState = {
     wishlist: [],
     bag: [],
     isAuth: false,
-    tshirt: []
+    tshirt: [],
+    total: 0
 }
 
 const reducer = ( state = initState, { type, payload } ) => {
@@ -18,11 +19,7 @@ const reducer = ( state = initState, { type, payload } ) => {
         case DELETE_FROM_WISHLIST: {
             return {
                 ...state,
-<<<<<<< HEAD
                 wishlist: state.wishlist.filter((item) => payload !== item.id)
-=======
-                wishlist: state.wishlist.filter((item) => payload === item.id)
->>>>>>> 218d1af9a6507ee622fbbe2f73208844baf05e56
             }
         }
         case ADD_TO_BAG: {
@@ -40,13 +37,25 @@ const reducer = ( state = initState, { type, payload } ) => {
         case TOGGLE_AUTH: {
             return {
                 ...state,
-                isAuth: true
+                isAuth: payload
             }
         }
         case ADD_TO_TSHIRT: {
             return {
                 ...state,
                 tshirt: payload
+            }
+        }
+        case ADD_TOTAL: {
+            return {
+                ...state,
+                total: payload
+            }
+        }
+        case SUBTRACT_TOTAL: {
+            return {
+                ...state,
+                total: payload
             }
         }
         default:

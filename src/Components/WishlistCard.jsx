@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from "styled-components"
 import {useDispatch} from "react-redux"
-import{ addToBag, deleteFromWishlist}from "../Redux/action.js"
+import{ addToBag, addToTotal, deleteFromWishlist}from "../Redux/action.js"
+import { useSelector } from 'react-redux'
 
 
 const WishlistCard = ({item}) => {
-
+    const total = useSelector((state) => state.total)
     
     const {title,price,images}=item
     const dispatch=useDispatch()
@@ -13,6 +14,7 @@ const WishlistCard = ({item}) => {
     const handleClick=()=>{
         dispatch(addToBag(item))
         dispatch(deleteFromWishlist(item.id))
+        dispatch(addToTotal( total + item.price ))
     }
 
     return (

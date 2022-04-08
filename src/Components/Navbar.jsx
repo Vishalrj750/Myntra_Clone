@@ -6,6 +6,10 @@ import search from '../img/search.png';
 import bag from '../img/bag.png';
 import wishlist from '../img/wishlist.png';
 import profile from '../img/profile.png';
+import { useNavigate } from "react-router-dom";
+// import { useSelector } from "react-redux";
+// import { Wishlist } from "./Wishlist";
+// import { Profile } from "./Profile";
 
 const NavbarWrapper = styledComponents.div`
 .nav{
@@ -170,47 +174,104 @@ const NavbarWrapper = styledComponents.div`
     font-size: 15px;
     border: 0px solid;
 }
+.profile-link{
+    width: 60px;
+    height: 15vh;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
 .nav-profile-div{
-    flex: 1;
+    width: 100%;
 }
 .nav-profile-logo-div{
-    width: 50%;
+    width: 100%;
     height: 40%;
 }
 .nav-profile-logo{
-    width: 100%;
+    width: 50%;
 }
 .nav-profile-title-div{
-    width: 40%;
-    height: 50%;
+    width: 100%;
+}
+.nav-profile-title{
+    margin: 0;
+}
+.hidden-profile{
+    display: none;
+}
+.hidden-profile hr{
+    border: 1px solid black;
+}
+.profile-link:hover .hidden-profile{
+    width: 17vw;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    position: absolute;
+    right: 0;
+    top: 80%;
+    text-align: left;
+    padding: 20px;
+}
+.hidden-profile-p1{
+    font-size: 15px;
+}
+.hidden-profile-p2{
+    font-size: 15px;
+}
+.login-btn{
+    padding: 8px;
+    font-size: 18px;
+    color: red;
+}
+.hidden-profile-div2{
+    line-height: 10px;
+}
+.hidden-profile-div3{
+    line-height: 10px;
+}
+.wishlist-link{
+    flex: 1;
+    text-decoration: none;
+    color: black;
 }
 .nav-wishlist-div{
-    flex: 1;
+    width: 100%;
 }
 .nav-wishlist-logo-div{
-    width: 50%;
+    width: 100%;
     height: 40%;
 }
 .nav-wishlist-logo{
-    width: 100%;
+    width: 50%;
 }
 .nav-wishlist-title-div{
-    width: 40%;
-    height: 50%;
+    width: 100%;
+}
+.nav-wishlist-title{
+    margin: 0;
+}
+.bag-link{
+    flex: 1;
+    text-decoration: none;
+    color: black;
 }
 .nav-bag-div{
-    flex: 1;
+    width: 100%;
 }
 .nav-bag-logo-div{
-    width: 50%;
+    width: 100%;
     height: 40%;
 }
 .nav-bag-logo{
-    width: 100%;
+    width: 50%;
 }
 .nav-bag-title-div{
-    width: 40%;
-    height: 50%;
+    width: 100%;
+}
+.nav-bag-title{
+    margin: 0;
 }
 .nav-men-cat-items{
     text-decoration: none;
@@ -254,15 +315,25 @@ const NavbarWrapper = styledComponents.div`
 .nav-studio-cat-3 img{
     width: 30vw;
 }
-.wishlist-link{
-    width: 50px;
-    text-decoration: none;
-    color: black;
-    text-align: center;
-}
 `
 
 function Navbar() {
+    const navigate = useNavigate()
+    // const isAuth = useSelector((state) => state.isAuth)
+
+    const handleClick = () => {
+        navigate('/profile')
+    }
+
+    // const handlePage = () => {
+    //     if(isAuth) {
+    //         return <Wishlist />
+    //     }
+    //     else{
+    //         return <Profile />
+    //     }
+    // }
+
     return(
         <NavbarWrapper>
             <div className="nav">
@@ -945,16 +1016,40 @@ function Navbar() {
                             <input type="text" className="nav-search-input" placeholder="Search for Products, Brands and more"/>
                         </div>
                     </div>
-                    <div className="nav-profile-div">
-                        <div className="nav-profile-logo-div">
-                            <img src={ profile } alt="" className="nav-profile-logo" />
+                    <Link to={`/profile`} className="profile-link">
+                        <div className="nav-profile-div">
+                            <div className="nav-profile-logo-div">
+                                <img src={ profile } alt="" className="nav-profile-logo" />
+                            </div>
+                            <div className="nav-profile-title-div">
+                                <p className="nav-profile-title">Profile</p>
+                            </div>
                         </div>
-                        <div className="nav-profile-title-div">
-                            <p className="nav-profile-title">Profile</p>
+                        <hr />
+                        <div className="hidden-profile">
+                            <div className="hidden-profile-div1">
+                                <h4 className="hidden-profile-title">Welcome</h4>
+                                <p className="hidden-profile-p1">To access account and manage orders</p>
+                                <button className="login-btn" onClick={ () => handleClick() } >LOGIN/SIGNUP</button>
+                            </div>
+                            <div className="hidden-profile-div2">
+                                <p className="hidden-profile-p2">Orders</p>
+                                <p className="hidden-profile-p2">Wishlist</p>
+                                <p className="hidden-profile-p2">Gift Cards</p>
+                                <p className="hidden-profile-p2">Contact Us</p>
+                                <p className="hidden-profile-p2">Myntra Insider</p>
+                            </div>
+                            <hr />
+                            <div className="hidden-profile-div3">
+                                <p className="hidden-profile-p2">Myntra Credits</p>
+                                <p className="hidden-profile-p2">Coupons</p>
+                                <p className="hidden-profile-p2">Saved Cards</p>
+                                <p className="hidden-profile-p2">Saved Addresses</p>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                     <Link to={`/wishlist`} className="wishlist-link" >
-                        <div className="nav-wishlist-div">
+                        <div className="nav-wishlist-div" >
                             <div className="nav-wishlist-logo-div">
                                 <img src={ wishlist } alt="" className="nav-wishlist-logo" />
                             </div>
@@ -963,14 +1058,16 @@ function Navbar() {
                             </div>
                         </div>
                     </Link>
-                    <div className="nav-bag-div">
-                        <div className="nav-bag-logo-div">
-                            <img src={ bag } alt="" className="nav-bag-logo" />
+                    <Link to={`/bag`} className="bag-link">
+                        <div className="nav-bag-div">
+                            <div className="nav-bag-logo-div">
+                                <img src={ bag } alt="" className="nav-bag-logo" />
+                            </div>
+                            <div className="nav-bag-title-div">
+                                <p className="nav-bag-title">Bag</p>
+                            </div>
                         </div>
-                        <div className="nav-bag-title-div">
-                            <p className="nav-bag-title">Bag</p>
-                        </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </NavbarWrapper>
