@@ -1,11 +1,12 @@
-import { ADD_TO_BAG, ADD_TO_TSHIRT, ADD_TO_WISHLIST, DELETE_FROM_BAG, DELETE_FROM_WISHLIST, TOGGLE_AUTH, ADD_TOTAL, SUBTRACT_TOTAL } from "./actionType"
+import { ADD_TO_BAG, ADD_TO_TSHIRT, ADD_TO_WISHLIST, DELETE_FROM_BAG, DELETE_FROM_WISHLIST, TOGGLE_AUTH, ADD_TOTAL, SUBTRACT_TOTAL, FILTER_TSHIRT_ROADSTER } from "./actionType"
 
 const initState = {
     wishlist: [],
     bag: [],
     isAuth: false,
     tshirt: [],
-    total: 0
+    total: 0,
+    filter_roadster: []
 }
 
 const reducer = ( state = initState, { type, payload } ) => {
@@ -44,6 +45,12 @@ const reducer = ( state = initState, { type, payload } ) => {
             return {
                 ...state,
                 tshirt: payload
+            }
+        }
+        case FILTER_TSHIRT_ROADSTER: {
+            return {
+                ...state,
+                filter_roadster: payload
             }
         }
         case ADD_TOTAL: {

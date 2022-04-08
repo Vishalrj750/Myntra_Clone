@@ -1,4 +1,4 @@
-import { ADD_TO_BAG, ADD_TO_WISHLIST, DELETE_FROM_BAG, DELETE_FROM_WISHLIST, TOGGLE_AUTH, ADD_TO_TSHIRT, ADD_TOTAL, SUBTRACT_TOTAL } from "./actionType";
+import { ADD_TO_BAG, ADD_TO_WISHLIST, DELETE_FROM_BAG, DELETE_FROM_WISHLIST, TOGGLE_AUTH, ADD_TO_TSHIRT, ADD_TOTAL, SUBTRACT_TOTAL, FILTER_TSHIRT_ROADSTER } from "./actionType";
 
 export const addToWishlist = ( payload ) => {
     return {
@@ -38,6 +38,13 @@ export const toggleAuth = ( payload ) => {
 export const addToTshirt = ( payload ) => {
     return {
         type: ADD_TO_TSHIRT,
+        payload
+    }
+}
+
+export const filterTshirtRoadster = ( payload ) => {
+    return {
+        type: FILTER_TSHIRT_ROADSTER,
         payload
     }
 }
