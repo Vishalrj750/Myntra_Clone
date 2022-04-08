@@ -19,7 +19,7 @@ display:flex;
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 15vh;
+    margin-top: 95px;
     margin-left:17vw;
 }
 `
