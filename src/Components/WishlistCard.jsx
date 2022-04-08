@@ -12,6 +12,7 @@ const WishlistCard = ({item}) => {
 
     const handleClick=()=>{
         dispatch(addToBag(item))
+        dispatch(deleteFromWishlist(item.id))
     }
 
     const removeClick=()=>{
@@ -67,23 +68,27 @@ const CardDiv = styled.div`
         // padding-left:10px;
         h5 {
             font-size: 17px;
-         padding:0;
-         margin:0;
+            padding:0;
+            margin:0;
+            max-height:20px;
+         overflow:hidden;
         }
         p {
-            font-size: 15px;
+            font-size: 20px;
             padding:0;
             margin:0;
             text-align:center;
-           
         }
         
     }
 `
 
 const Button =styled.button`
-background-color:white;
-color:#FF33A8;
+background-color:#ff3f6c;
+
+color:white;
+font-size:15px;
+padding:6px;
 width:100%;
 // object-fit:contain;
 // align-item:right;
