@@ -1,7 +1,15 @@
 import React from 'react'
 import styled from "styled-components"
+import { useNavigate } from 'react-router-dom'
 
 const Checkout = () => {
+
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate('/thankyou')
+  }
+
   return (
     <Div>
         <h4>CREDIT/DEBIT CARD</h4>
@@ -15,12 +23,12 @@ const Checkout = () => {
         <Check/>
         <span>Save this Card for faster payments</span>
         </label>
-        <Button>PAY NOW</Button>
+        <Button onClick={ () => handleClick() } >PAY NOW</Button>
     </Div>
   )
 }
 
-export default Checkout
+export { Checkout }
 
 const Div=styled.div`
 display:flex;

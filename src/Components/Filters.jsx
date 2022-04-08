@@ -13,6 +13,19 @@ const Filters = () => {
     const dispatch = useDispatch()
     let filterData;
 
+    const filterPrice = (e) => {
+        if(e.target.checked) {
+            filterData = tshirt.filter((item) => item.price >= 159 && item.price <= 3469)
+            dispatch( addToTshirt( filterData ) )
+        }
+        else{
+            fetch(`http://localhost:3001/items`)
+        .then((res) => res.json())
+        .then((res) => dispatch( addToTshirt( res ) ))
+        .catch((err) => console.log(err))
+        }
+    }
+
     const filterWrogn = (e) => {
         if(e.target.checked) {
             filterData = tshirt.filter((item) => item.brand === "WROGN")
@@ -95,7 +108,7 @@ const Filters = () => {
 
                 <P1>PRICE</P1>
                 <label>        
-                    <Check></Check>
+                    <Check onChange={ (e) => filterPrice(e) } ></Check>
                     <span>Rs 159 to Rs 3469</span>
                 </label>
                 <label>        

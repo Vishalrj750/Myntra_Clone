@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { BagCard } from "./BagCard";
+import { useNavigate } from "react-router-dom";
 
 const BagWrapper = styled.div`
 margin-top: 90px;
@@ -54,6 +55,11 @@ hr{
 function Bag() {
     const bag = useSelector((state) => state.bag)
     const total = useSelector((state) => state.total)
+    const navigate = useNavigate()
+
+    const handleClick = () => {
+        navigate('/payment')
+    }
 
     return(
         <BagWrapper>
@@ -82,7 +88,7 @@ function Bag() {
                     <h2 className="total-amount-right">{ total }</h2>
                 </div>
                 <div className="place-order-btn-div">
-                    <button className="place-order-btn">PLACE ORDER</button>
+                    <button className="place-order-btn" onClick={ () => handleClick() } >PLACE ORDER</button>
                 </div>
             </div>
         </BagWrapper>
