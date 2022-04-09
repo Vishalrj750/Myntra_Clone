@@ -41,8 +41,7 @@ function Thankyou() {
                  Your Order is placed 
                  </p>
                  <p>
-                 Thank You <br />
-                for Shopping</p>
+                 Thankyou for Shopping</p>
                 
             
             </div>
