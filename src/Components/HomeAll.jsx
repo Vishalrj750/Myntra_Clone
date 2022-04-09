@@ -223,6 +223,11 @@ function HomeAll() {
     
 
 <div>
+  <br />
+  <br />
+  <br /><br />
+  <br />
+  <br />
 
  <div className='SimpleImg'>
     <SimpleImageSlider
