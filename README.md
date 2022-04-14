@@ -1,5 +1,5 @@
 # Myntra_Website Clone
-KFC_website_clone where users can log in through their mobile numbers can order foods, and also can see their total ordered items and their prices in the navbar. And also users can see their ordered foods by clicking on the cart logo and making payments to order. A collaborative project, built-in 5 days by a team of 3 developers.
+Myntra_Website Clone where users can log in through their mobile numbers can order clothings and other house hold things, and also can see their total ordered items and their prices in the navbar. And also users can see their ordered items by clicking on the cart logo and making payments to order. A collaborative project, built-in 5 days by a team of 3 developers.
 ## Tech Stack
 ### 1. HTML
 ### 2. CSS
