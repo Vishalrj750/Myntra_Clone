@@ -9,7 +9,7 @@ const CardWrapper = styled.div`
     width: 15vw;
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    background-color: aliceblue;
     box-shadow: 5px 10px 5px #cecece;
     position: relative;
 }
@@ -17,7 +17,7 @@ const CardWrapper = styled.div`
     width: 15vw;
 }
 .img{
-    width: 10%;
+    width: 100%;
 }
 .title{
     height: 15px;

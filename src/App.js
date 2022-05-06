@@ -12,6 +12,9 @@ import { Checkout } from './Components/Checkout';
 import { Thankyou } from './Components/Thankyou';
 import {Login} from './Components/Login'
 import {Register} from './Components/Register'
+import { PaymentPage } from './Components/PaymentPage';
+import { RegisterTry } from './Components/RegisterTry';
+
 
 
 function App() {
@@ -19,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      
+    
       
       <Routes>
         <Route path='/' element={ <HomeAll/> } />
@@ -27,7 +30,7 @@ function App() {
         <Route path='/wishlist' element={ isAuth ? <Wishlist/> : <Profile/> } />
         <Route path='/profile' element={ <Profile/> } />
         <Route path='/bag' element={ isAuth ? <Bag/> : <Profile/> } />
-        <Route path='/payment' element={ <Checkout/> } />
+        <Route path='/payment' element={ <PaymentPage/> } />
         <Route path='/thankyou' element={ <Thankyou/> } />
       </Routes>
     </div>
