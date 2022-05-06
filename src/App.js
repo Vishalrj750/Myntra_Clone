@@ -10,6 +10,9 @@ import { useSelector } from "react-redux";
 import { Bag } from './Components/Bag';
 import { Checkout } from './Components/Checkout';
 import { Thankyou } from './Components/Thankyou';
+import {Login} from './Components/Login'
+import {Register} from './Components/Register'
+
 
 function App() {
   const isAuth = useSelector((state) => state.isAuth)
@@ -17,6 +20,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      
+      
       <Routes>
         <Route path='/' element={ <HomeAll/> } />
         <Route path='/men-tshirt' element={ <Tshirts/> } />

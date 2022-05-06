@@ -9,7 +9,7 @@ const CardWrapper = styled.div`
     width: 15vw;
     display: flex;
     flex-direction: column;
-    background-color: aliceblue;
+    background-color: blue;
     box-shadow: 5px 10px 5px #cecece;
     position: relative;
 }
@@ -17,7 +17,7 @@ const CardWrapper = styled.div`
     width: 15vw;
 }
 .img{
-    width: 100%;
+    width: 10%;
 }
 .title{
     height: 15px;
@@ -43,6 +43,10 @@ const CardWrapper = styled.div`
     font-weight: bold;
     background-color: aliceblue;
 }
+.maincard{
+    margin:10px;
+    background-color: red;
+}
 `
 
 function Card({ img, title, description, price, id }) {
@@ -59,6 +63,7 @@ function Card({ img, title, description, price, id }) {
 
     return(
         <CardWrapper>
+            
             <div className="card-main">
                 <div className="img-div">
                     <img src={ img } alt="" className="img" />
@@ -72,6 +77,7 @@ function Card({ img, title, description, price, id }) {
                     <button onClick={ () => handleClick(id) }>WISHLIST</button>
                 </div>
             </div>
+            
         </CardWrapper>
     )
 }

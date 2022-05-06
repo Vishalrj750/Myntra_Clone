@@ -2,6 +2,19 @@ import React from 'react'
 import styled from "styled-components"
 import { useNavigate } from 'react-router-dom'
 
+
+
+const CardWrapper = styled.div`
+.maincheckout{
+    
+    display:flex;
+flex-direction:column;
+margin:155px 570px;
+    background-color: aliceblue;
+    
+
+
+`
 const Checkout = () => {
 
   const navigate = useNavigate()
@@ -11,7 +24,8 @@ const Checkout = () => {
   }
 
   return (
-    <Div>
+    
+    <Div className='maincheckout'>
         <h4>CREDIT/DEBIT CARD</h4>
         <Input type="text" placeholder="Card Number"/>
         <Input type="text" placeholder="Name on Card"/>
@@ -33,7 +47,8 @@ export { Checkout }
 const Div=styled.div`
 display:flex;
 flex-direction:column;
-margin:155px 570px;
+ margin:155px 570px;
+background-color: aliceblue;
 `
 
 const Div2=styled.div`
