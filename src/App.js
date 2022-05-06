@@ -12,6 +12,9 @@ import { Checkout } from './Components/Checkout';
 import { Thankyou } from './Components/Thankyou';
 import {Login} from './Components/Login'
 import {Register} from './Components/Register'
+import { PaymentPage } from './Components/PaymentPage';
+import { RegisterTry } from './Components/RegisterTry';
+
 
 
 function App() {
