@@ -1,4 +1,3 @@
-import React from "react";
 import styled from 'styled-components';
 import Img from '../img/profile_login.webp';
 import { useDispatch } from "react-redux";
@@ -51,6 +50,7 @@ function Profile() {
         dispatch( toggleAuth(true) )
         navigate('/wishlist')
     }
+
 
     return(
         <ProfileWrapper>

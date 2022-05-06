@@ -13,6 +13,7 @@ import { Thankyou } from './Components/Thankyou';
 
 function App() {
   const isAuth = useSelector((state) => state.isAuth)
+  
   return (
     <div className="App">
       <Navbar />
