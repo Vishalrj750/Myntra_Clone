@@ -20,14 +20,13 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      
-      
       <Routes>
         <Route path='/' element={ <HomeAll/> } />
         <Route path='/men-tshirt' element={ <Tshirts/> } />
-        <Route path='/wishlist' element={ isAuth ? <Wishlist/> : <Profile/> } />
-        <Route path='/profile' element={ <Profile/> } />
-        <Route path='/bag' element={ isAuth ? <Bag/> : <Profile/> } />
+        <Route path='/wishlist' element={ isAuth ? <Wishlist/> : <Login/> } />
+        <Route path='/profile' element={ <Login/> } />
+        <Route path='/register' element={ <Register/> } />
+        <Route path='/bag' element={ isAuth ? <Bag/> : <Login/> } />
         <Route path='/payment' element={ <Checkout/> } />
         <Route path='/thankyou' element={ <Thankyou/> } />
       </Routes>

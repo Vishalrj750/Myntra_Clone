@@ -148,23 +148,52 @@ body {
 
 const Register = () => {
 
+  const [formDetails, setFormDetails] = React.useState({
+    name: "",
+    number: "",
+    email: "",
+    password: "",
+    conformpassword: "",
+    address: "",
+    city: "",
+    zip: ""
+})
+
+  const { name, number, email, password, conformpassword, address, city, zip } = formDetails
+
   const navigate = useNavigate()
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormDetails({
+      ...formDetails,
+      [name]: value
+    })
+  }
  
   const handleClick = () => {
-    navigate('/Register.jsx')
+    fetch(`http://localhost:9008/register`, {
+            method: "POST",
+            body: JSON.stringify(formDetails),
+            headers: {
+                "content-type": "application/json"
+            }
+        })
+        .then((res) => res.json())
+        .then((res) => navigate( '/profile' ))
+        .catch((err) => console.log(err))
   }
 
   return (
     <RegisterWrapper>
     <div className="signupFrm">
     <div  className="wrapper">
-            <br />
-            <br /> <br /> <br /> <br /> <br />
             <h3 class="title">Register</h3>
             <div className='login1'>
              <div class="inputContainer">
       
-      <input type="text" className="input"  placeholder="Name"/> 
+      <input type="text" className="input"  placeholder="Name" name='name' value={ name } onChange={ handleChange }/> 
       <label for="inputEmail4" class="label">Name</label>  
     </div>
 
@@ -173,40 +202,40 @@ const Register = () => {
 
         <div class="inputContainer">
       
-      <input type="text" minlength="10" className="input" maxlength="10"  placeholder="Phone Number" name='number'  />
+      <input type="text" minlength="10" className="input" maxlength="10"  placeholder="Phone Number" name='number' value={ number } onChange={ handleChange } />
       <label for="inputEmail4" className="label">Phone Number</label>
   </div>
    <div className="inputContainer">       
   
      
-      <input type="email" className="input" placeholder="email" name="email" />
+      <input type="email" className="input" placeholder="email" name="email" value={ email } onChange={ handleChange }/>
        <label for="inputEmail4" className="label">Email</label>
      </div> 
    <div className="inputContainer"> 
       
-      <input type="password" className="input" placeholder="Password" name="password" />
+      <input type="password" className="input" placeholder="Password" name="password" value={ password } onChange={ handleChange }/>
       <label for="inputPassword4" className="label">Password</label>
    </div>
     <div className="inputContainer">
       
-      <input type="password" className="input" placeholder="Conform Password" name="conformpassword" />
+      <input type="password" className="input" placeholder="Conform Password" name="conformpassword" value={ conformpassword } onChange={ handleChange }/>
       <label for="inputPassword4" className="label">Conform Password</label>
    </div>  
     
   <div className="inputContainer">
     
-    <input type="text"  className="input"  placeholder="1234 Main St" name="address" />
+    <input type="text"  className="input"  placeholder="1234 Main St" name="address" value={ address } onChange={ handleChange } />
     <label for="inputAddress" className="label">Address</label>
     </div>
  <div className="inputContainer">
      
-      <input type="text" className="input" placeholder="city" name="city" />
+      <input type="text" className="input" placeholder="city" name="city" value={ city } onChange={ handleChange } />
        <label for="inputCity" className="label">City</label>
     </div>
 
     <div className="inputContainer">
       
-      <input type="text" className="input" placeholder="zip" name="zip" />
+      <input type="text" className="input" placeholder="zip" name="zip" value={ zip } onChange={ handleChange } />
       <label for="inputZip" className="label">Zip</label>
      </div>
      
@@ -221,7 +250,7 @@ const Register = () => {
 
                  
            <div className='button'>
-           <button idName="log" value="Register">Register</button>
+           <button idName="log" onClick={ handleClick }>Register</button>
            
            </div>
            </div>

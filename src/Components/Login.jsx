@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
+import { toggleAuth } from '../Redux/action';
 
 const LoginWrapper = styled.div`
 .button{
@@ -144,28 +146,57 @@ body {
 
 const Login = () => {
 
+  const dispatch = useDispatch();
+
   const navigate = useNavigate()
+  const [formDetails, setFormDetails] = React.useState({
+    email: "",
+    password: ""
+})
+
+const { email, password } = formDetails;
+
+const handleChange = (e) => {
+  const { name, value } = e.target;
+
+  setFormDetails({
+    ...formDetails,
+    [name]: value
+  })
+}
+
+const handleClickLogin = () => {
+  fetch(`http://localhost:9008/login`, {
+            method: "POST",
+            body: JSON.stringify(formDetails),
+            headers: {
+                "content-type": "application/json"
+            }
+        })
+        .then((res) => res.json())
+        .then((res) => { dispatch( toggleAuth( res.status ) );
+        navigate('/wishlist') })
+        .catch((err) => console.log(err))
+}
  
   const handleClick = () => {
-    navigate('/Register.jsx')
+    navigate('/Register')
   }
 
   return (
     <LoginWrapper>
     <div className="signupFrm">
     <div  className="wrapper">
-            <br />
-            <br /> <br /> <br /> <br /> <br />
             <h3 class="title">Login</h3>
             <div className='login1'>
                 <div class="inputContainer">
-                <input type="text" className='input' placeholder='Email' name='email'/>
+                <input type="text" className='input' placeholder='Email' name='email' value={ email } onChange={ handleChange } />
             <label for="email" className='label'><i></i> Email</label>
            
             </div>
 
             <div class="inputContainer" >
-            <input type="text" className='input' placeholder='Password' name='password' />
+            <input type="text" className='input' placeholder='Password' name='password' value={ password } onChange={ handleChange } />
             <label for="password" className='label'>Password</label>
             
             </div>
@@ -179,7 +210,7 @@ const Login = () => {
       <br />
                  
            <div className='button'>
-           <button idName="log">Login</button>
+           <button idName="log" onClick={ handleClickLogin } >Login</button>
            <button idName="log" value="Register" onClick={ () => handleClick() }>Register</button>
            </div>
            </div>
