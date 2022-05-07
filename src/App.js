@@ -14,6 +14,7 @@ import {Login} from './Components/Login'
 import {Register} from './Components/Register'
 import { PaymentPage } from './Components/PaymentPage';
 import { RegisterTry } from './Components/RegisterTry';
+import { LoginTry } from './Components/LoginTry';
 
 
 
@@ -23,14 +24,15 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      
       <Routes>
         <Route path='/' element={ <HomeAll/> } />
         <Route path='/men-tshirt' element={ <Tshirts/> } />
-        <Route path='/wishlist' element={ isAuth ? <Wishlist/> : <Login/> } />
-        <Route path='/profile' element={ <Login/> } />
+        <Route path='/wishlist' element={ isAuth ? <Wishlist/> : <LoginTry/> } />
+        <Route path='/profile' element={ <LoginTry/> } />
         <Route path='/register' element={ <Register/> } />
-        <Route path='/bag' element={ isAuth ? <Bag/> : <Login/> } />
-        <Route path='/payment' element={ <Checkout/> } />
+        <Route path='/bag' element={ isAuth ? <Bag/> : <LoginTry/> } />
+        <Route path='/payment' element={ <PaymentPage/> } />
         <Route path='/thankyou' element={ <Thankyou/> } />
       </Routes>
     </div>

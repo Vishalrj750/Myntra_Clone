@@ -262,7 +262,7 @@ const Register = () => {
 
 
                         <div className='button'>
-                            <button idName="log"
+                            <button id="log"
                                 onClick={handleClick}>Register</button>
 
                         </div>

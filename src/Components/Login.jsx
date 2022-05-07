@@ -215,13 +215,13 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-            <div className='button'>
+            {/* <div className='button'>
                 <button id='log'>Login</button>
                 <button id='log' value="Register"
                     onClick={
                         () => handleClick()
                 }>Register</button>
-            </div>
+            </div> */}
         </LoginWrapper>
     )
 }
