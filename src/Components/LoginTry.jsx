@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import {useNavigate} from 'react-router-dom'
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {toggleAuth} from '../Redux/action';
 
 const LoginWrapper = styled.div`
@@ -271,6 +271,7 @@ background-color: rgb(212, 62, 87);
 const LoginTry = () => {
 
   const dispatch = useDispatch();
+  const isAuth = useSelector((state) => state.isAuth)
 
   const [formDetails, setFormDetails] = React.useState({email: "", password: ""})
 
@@ -294,7 +295,7 @@ const LoginTry = () => {
             }
         }).then((res) => res.json()).then((res) => {
             dispatch(toggleAuth(res.status));
-            navigate('/wishlist')
+            isAuth ? navigate('/wishlist') : navigate('/register'); 
         }).catch((err) => console.log(err))
     }
 

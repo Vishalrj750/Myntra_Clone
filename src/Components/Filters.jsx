@@ -19,7 +19,7 @@ const Filters = () => {
             dispatch( addToTshirt( filterData ) )
         }
         else{
-            fetch(`http://localhost:3001/items`)
+            fetch(`http://localhost:9008/products`)
         .then((res) => res.json())
         .then((res) => dispatch( addToTshirt( res ) ))
         .catch((err) => console.log(err))
@@ -32,7 +32,7 @@ const Filters = () => {
             dispatch( addToTshirt( filterData ) )
         }
         else{
-            fetch(`http://localhost:3001/items`)
+            fetch(`http://localhost:9008/products`)
         .then((res) => res.json())
         .then((res) => dispatch( addToTshirt( res ) ))
         .catch((err) => console.log(err))
@@ -45,7 +45,7 @@ const Filters = () => {
             dispatch( addToTshirt( filterData ) )
         }
         else{
-            fetch(`http://localhost:3001/items`)
+            fetch(`http://localhost:9008/products`)
         .then((res) => res.json())
         .then((res) => dispatch( addToTshirt( res ) ))
         .catch((err) => console.log(err))

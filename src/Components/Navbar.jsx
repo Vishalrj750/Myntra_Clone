@@ -24,8 +24,9 @@ const NavbarWrapper = styledComponents.div`
     background-color: aliceblue;
 }
 .nav-left{
-    width: 50%;
+    width: 50vw;
     display: flex;
+    justify-content: space-between;
     position: relative;
 }
 .nav-link{
@@ -37,46 +38,49 @@ const NavbarWrapper = styledComponents.div`
 .nav-title{
     color: black;
 }
+.nav-logo-link{
+    width: 15%;
+}
 .nav-logo{
-    width: 100px;
-    margin-top: 5px;
+    width: 100%;
+    margin-top: 10px;
     margin-left: 10px;
 }
 .myntra-logo{
     width: 100%;
 }
 .nav-men{
-    width: 50px;
+    // width: 50px;
 }
 .nav-men-cat{
     display: none;
 }
 .nav-women{
-    width: 80px;
+    // width: 80px;
 }
 .nav-women-cat{
     display: none;
 }
 .nav-kids{
-    width: 50px;
+    // width: 50px;
 }
 .nav-kids-cat{
     display: none;
 }
 .nav-home-living{
-    width: 130px;
+    // width: 130px;
 }
 .nav-home-living-cat{
     display: none;
 }
 .nav-beauty{
-    width: 80px;
+    // width: 80px;
 }
 .nav-beauty-cat{
     display: none;
 }
 .nav-studio{
-    width: 80px;
+    // width: 80px;
 }
 .nav-studio-cat{
     display: none;
@@ -151,6 +155,7 @@ const NavbarWrapper = styledComponents.div`
 .nav-right{
     width: 50vw;
     display: flex;
+    justify-content: space-between;
 }
 .nav-search-div{
     flex: 8;
@@ -163,7 +168,7 @@ const NavbarWrapper = styledComponents.div`
     flex: 12;
 }
 .nav-search-logo{
-    width: 50%;
+    max-width: 50%;
     margin-top: 20px;
     margin-left: 30px;
 }
@@ -185,7 +190,7 @@ const NavbarWrapper = styledComponents.div`
     width: 100%;
 }
 .nav-profile-logo-div{
-    width: 100%;
+    width: 60px;
     height: 40%;
 }
 .nav-profile-logo{
@@ -240,7 +245,7 @@ const NavbarWrapper = styledComponents.div`
     width: 100%;
 }
 .nav-wishlist-logo-div{
-    width: 100%;
+    width: 70px;
     height: 40%;
 }
 .nav-wishlist-logo{
@@ -261,17 +266,18 @@ const NavbarWrapper = styledComponents.div`
     width: 100%;
 }
 .nav-bag-logo-div{
-    width: 100%;
+    width: 70px;
     height: 40%;
 }
 .nav-bag-logo{
-    width: 50%;
+    width: 40%;
+    margin-right: 20px;
 }
 .nav-bag-title-div{
     width: 100%;
 }
 .nav-bag-title{
-    margin: 0;
+    margin: 0px 20px 0px 0px;
 }
 .nav-men-cat-items{
     text-decoration: none;
@@ -315,6 +321,17 @@ const NavbarWrapper = styledComponents.div`
 .nav-studio-cat-3 img{
     width: 30vw;
 }
+// @media only screen and (max-width: 439px){
+//     .nav-left{
+//         width: 100vw;
+//         display: flex;
+//         justify-content: space-between;
+//         position: relative; 
+//     }
+//     .nav-right{
+//         display: none;
+//     }
+// }
 `
 
 function Navbar() {
@@ -338,7 +355,7 @@ function Navbar() {
         <NavbarWrapper>
             <div className="nav">
                 <div className="nav-left">
-                    <Link to={`/`}>
+                    <Link to={`/`} className="nav-logo-link">
                         <div className="nav-logo">
                             <img src={ logo } alt="" className="myntra-logo" />
                         </div>
@@ -1025,7 +1042,6 @@ function Navbar() {
                                 <p className="nav-profile-title">Profile</p>
                             </div>
                         </div>
-                        <hr />
                         <div className="hidden-profile">
                             <div className="hidden-profile-div1">
                                 <h4 className="hidden-profile-title">Welcome</h4>
