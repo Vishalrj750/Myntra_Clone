@@ -173,7 +173,7 @@ const Register = () => {
     }
 
     const handleClick = () => {
-        fetch(`http://localhost:9008/register`, {
+        fetch(`https://myntra-backend-clone.herokuapp.com/register`, {
             method: "POST",
             body: JSON.stringify(formDetails),
             headers: {

@@ -157,7 +157,7 @@ const Login = () => {
     }
 
     const handleClickLogin = () => {
-        fetch(`http://localhost:9008/login`, {
+        fetch(`https://myntra-backend-clone.herokuapp.com/login`, {
             method: "POST",
             body: JSON.stringify(formDetails),
             headers: {

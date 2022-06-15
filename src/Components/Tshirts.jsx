@@ -34,7 +34,7 @@ function Tshirts() {
     }, [])
 
     const getData = () => {
-        fetch(`http://localhost:9008/products`)
+        fetch(`https://myntra-backend-clone.herokuapp.com/products`)
         .then((res) => res.json())
         .then((res) => dispatch( addToTshirt( res ) ))
         .catch((err) => console.log(err))
