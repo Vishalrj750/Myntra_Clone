@@ -28,13 +28,18 @@ function Tshirts() {
     const tshirt = useSelector((state) => state.tshirt)
     const dispatch = useDispatch()
 
-    React.useEffect(() => {
-        getData()
+    // React.useEffect(() => {
+    //     getData()
+    //     console.log(tshirt)
+    // }, [tshirt])
+    // console.log(tshirt)
 
-    }, [])
+    if(!tshirt.length){
+        getData();
+    }
 
-    const getData = () => {
-        fetch(`https://myntra-backend-clone.herokuapp.com/products`)
+    async function getData() {
+        await fetch(`https://myntra-backend-clone.herokuapp.com/products`)
         .then((res) => res.json())
         .then((res) => dispatch( addToTshirt( res ) ))
         .catch((err) => console.log(err))

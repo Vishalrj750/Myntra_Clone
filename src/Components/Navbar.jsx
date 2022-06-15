@@ -995,7 +995,7 @@ function Navbar() {
                             </div>
                             <div className="nav-studio-cat">
                                 <div className="nav-studio-cat-1">
-                                <img  src="https://constant.myntassets.com/web/assets/img/studio-logo-new.svg" ></img>
+                                <img  src="https://constant.myntassets.com/web/assets/img/studio-logo-new.svg" alt="studio" ></img>
                                 </div>
                                 <div className="nav-studio-cat-2">
                                 <p> Your daily inspiration for everything fashion</p>
@@ -1005,7 +1005,7 @@ function Navbar() {
                                 <img draggable="false" src="https://assets.myntassets.com/f_auto,q_auto:eco,dpr_1.3,w_400,c_limit,fl_progressive/assets/images/retaillabs/2022/4/6/a4c1ed48-2c78-4377-bd42-a4cc925834421649242476135-6APR22-Shows-main-bannerq.jpg" loading="lazy" srcset="
   https://assets.myntassets.com/f_auto,q_auto:eco,dpr_1.8,w_411,c_limit,fl_progressive/assets/images/retaillabs/2022/4/6/a4c1ed48-2c78-4377-bd42-a4cc925834421649242476135-6APR22-Shows-main-bannerq.jpg 1233w,
   https://assets.myntassets.com/f_auto,q_auto:eco,dpr_1.5,w_360,c_limit,fl_progressive/assets/images/retaillabs/2022/4/6/a4c1ed48-2c78-4377-bd42-a4cc925834421649242476135-6APR22-Shows-main-bannerq.jpg 1080w,
-  https://assets.myntassets.com/f_auto,q_auto:eco,dpr_1.3,w_360,c_limit,fl_progressive/assets/images/retaillabs/2022/4/6/a4c1ed48-2c78-4377-bd42-a4cc925834421649242476135-6APR22-Shows-main-bannerq.jpg 750w" class="css-1nv89s7"></img>
+  https://assets.myntassets.com/f_auto,q_auto:eco,dpr_1.3,w_360,c_limit,fl_progressive/assets/images/retaillabs/2022/4/6/a4c1ed48-2c78-4377-bd42-a4cc925834421649242476135-6APR22-Shows-main-bannerq.jpg 750w" class="css-1nv89s7" alt="studio" ></img>
                             
 
                                 </div>

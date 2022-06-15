@@ -47,9 +47,9 @@ const Footer = () => {
     padding-top:30px;
 
     `
-    const Styledh4=styled.h4`
-    text-align:left;
-    `
+    // const Styledh4=styled.h4`
+    // text-align:left;
+    // `
     const Styledh42=styled.h4`
     text-align:left;
     margin:0;
